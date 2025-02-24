@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Set the text color</title>
+	<style>
+		table{
+			border: 1px solid black;
+			border-spacing:0;
+		}
+	</style>
+</head>
+ 
+<body>
+    <h3 style="background-color:Blue; color:red"> hello! Welcome to GFG </h3>
+	<form action="#" method="GET">	
+		<p>Hieght:
+			<input type="number" id="myInput" required="required" placeholder="Numbers only">
+		</p>
+		<button onclick="sets()" >Try it</button>
+	</form>
+	<br/>
+	<script type="text/javascript" defer>
+		/* Initializing var if no val input */
+		var barH = 20
+		var rgap = 30
+		var r = 200
+		var g = 200
+		var b = 200
+		
+		/* creates the blank graph */
+		var totalhieght = 200
+		var totalwidth = 300
+		document.write("        <table border-spacing='0' id='dataTable'>");
+		document.write("        	<tr>");
+		for (var idx = 1; idx <= totalwidth; idx++)
+		{
+			document.write("        	<td></td>");
+		}
+		document.write("        	</tr>");
+		for (var idx = 1; idx <= totalhieght - 1; idx++) 
+		{
+			document.write("        	<tr><td></td></tr>");
+		}
+		document.write("        </table>");
+		
+		
+		
+		/* Updates table when the subkmit button is pressed */
+		function sets(){
+			var table = document.getElementById("dataTable");
+			var barH = Number(document.getElementById("myInput").value);
+			prompt(barH);
+			
+			/* Table insertRow() Method */
+		}
+	
+	
+	
+	</script>
+	
+	
+	
+	
+<body>

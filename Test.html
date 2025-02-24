@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Set the text color</title>
+	<style>
+		table{
+			border: 1px solid black;
+			border-spacing:0;
+		}
+	</style>
+</head>
+ 
+<body>
+    <h3 style="background-color:Blue; color:red"> hello! Welcome to GFG </h3>
+	<form action="#" method="GET">	
+		<p>Hieght:
+			<input type="text" id="myInput">
+		</p>
+		<button onclick="sets()" >Try it</button>
+		<button onclick="sets1()" >Try it</button>
+		<button onclick="sets()" >Try it</button>
+	</form>
+		
+	<script type="text/javascript" defer>
+		function border(){
+			for (var idz = 1; idz <= AL; idz++) /* Middle Border */
+			{
+				document.write("        	<td style='background-color: rgb("+(r-60)+","+(g-60)+","+(b-60)+");'></td>");				
+			}
+		}
+		
+		var Sizes = 2
+		var temp = Number(sessionStorage.getItem("temp"))
+		var x = Number(sessionStorage.getItem("widther")) /* Height (max is 100)*/
+		while(x > 100){
+		 x = x / 10
+		}
+		var r = 200
+		var g = 200
+		var b = 200
+		var totalhieght = 200
+		var totalwidth = 300
+		var rgap = 30
+		var D = Sizes * 5 /* Heihgt of top face, Depth of 3d Dimention */
+		var AL = 2 /* Difrence in Layers for Angles */
+		var Width = Sizes * 20
+		
+		if(temp > 0){
+			document.write("        <table border-spacing='0'>");
+			document.write("        	<tr>");
+			for (var idx = 1; idx <= totalwidth; idx++) /* creating total width */
+			{
+				document.write("        	<td></td>");
+			}
+			document.write("        	</tr>");
+			
+			
+			for (var idk = 1; idk <= totalhieght - x - D - 2; idk++){ /* Blank Distance on top */
+				document.write("        	<tr>");
+				document.write("        	<td></td>");
+				document.write("        	</tr>");
+			}
+			
+			/* Top Border Line */
+			document.write("        	<tr>");
+			for (var idz = 1; idz <= rgap + D * AL; idz++) 
+			{
+				document.write("        	<td></td>");
+			}
+			
+			for (var idz = 1; idz <= Width; idz++)
+			{
+				document.write("        	<td style='background-color: rgb("+(r-60)+","+(g-60)+","+(b-60)+");'></td>");
+			}
+			document.write("        	</tr>");
+			
+			
+			
+			/* Making the top of the Bar */
+			for (var idx = 1; idx <= D + 1; idx++) 
+			{
+				document.write("        	<tr>");
+				if( idx <= D ){
+					for (var idz = 1; idz <= rgap + D * AL - idx * AL; idz++) /* Gap Before the bar */
+					{
+						document.write("        	<td></td>");
+					}
+					 /* Left Border */
+					border(); 
+					
+					/* Lighter Color */
+					for (var idz = 1; idz <= Width; idz++) 
+					{
+						document.write("        	<td style='background-color: rgb("+r+","+g+","+b+");'></td>");				
+					}
+					
+					/* Middle Border */
+					if(idx > 1){
+					border(); 
+					}
+					else{
+						document.write("        	<td style='background-color: rgb("+(r-60)+","+(g-60)+","+(b-60)+");'></td>");
+					}
+					
+					for (var idz1 = 1; idz1 <= AL * (idx - 2); idz1++) /* Darkest color */
+					{
+						document.write("        	<td style='background-color: rgb("+(r-40)+","+(g-40)+","+(b-40)+");'></td>");				
+					}
+					
+					if(idx > 1){ /* right Border is 1 wide */
+						document.write("        	<td style='background-color: rgb("+(r-60)+","+(g-60)+","+(b-60)+");'></td>");
+					}
+				}
+				else{
+					for (var idz = 1; idz <= rgap; idz++) 
+					{				
+						document.write("        	<td></td>");
+					}
+					for (var idz = 1; idz <= Width + 2; idz++) 
+					{
+						document.write("        	<td style='background-color: rgb("+(r-60)+","+(g-60)+","+(b-60)+");'></td>");				
+					}
+					for (var idz1 = 1; idz1 <= AL * (idx - 2); idz1++) /* Darkest color */
+					{
+						document.write("        	<td style='background-color: rgb("+(r-40)+","+(g-40)+","+(b-40)+");'></td>");				
+					}
+					
+					if(idx > 1){ /* right Border is 1 wide */
+						document.write("        	<td style='background-color: rgb("+(r-60)+","+(g-60)+","+(b-60)+");'></td>");
+					}
+				}
+				document.write("        	</tr>");
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			/* middle and bottom of bar graph */
+			for (var idx = 1; idx <= x; idx++) 
+			{
+				document.write("        	<tr>");
+				for (var idz = 1; idz <= rgap; idz++) 
+				{
+					
+					document.write("        	<td></td>");
+					
+				}
+				
+				document.write("        	<td style='background-color: rgb("+(r-60)+","+(g-60)+","+(b-60)+");'></td>");
+				
+				for (var idz = 1; idz <= Width; idz++) 
+				{
+					
+					document.write("        	<td style='background-color: rgb("+(r-20)+","+(g-20)+","+(b-20)+");'></td>");
+				}
+				
+				if( idx <= x-D + 1){ /* Mid part of the bar graph */
+					document.write("        	<td style='background-color: rgb("+(r-60)+","+(g-60)+","+(b-60)+");'></td>");
+					for (var idz1 = 1; idz1 < AL * D - 1; idz1++) 
+					{
+						document.write("        	<td style='background-color: rgb("+(r-40)+","+(g-40)+","+(b-40)+");'></td>");				
+					}
+				}
+				else{ /* bottom slant*/
+					document.write("        	<td style='background-color: rgb("+(r-60)+","+(g-60)+","+(b-60)+");'></td>");
+					for (var lows = 1; lows < x - idx + Sizes; lows++) 
+						{
+							document.write("        	<td style='background-color: rgb("+(r-40)+","+(g-40)+","+(b-40)+");'></td>");
+							document.write("        	<td style='background-color: rgb("+(r-40)+","+(g-40)+","+(b-40)+");'></td>");						
+						}
+					
+					if(idx > x - D + 2){
+						document.write("        	<td style='background-color: rgb("+(r-60)+","+(g-60)+","+(b-60)+");'></td>");
+					}
+				}
+				
+				document.write("        	<td style='background-color: rgb("+(r-60)+","+(g-60)+","+(b-60)+");'></td>");
+				
+				document.write("        	</tr>");
+			}
+			document.write("        </table>");
+		}
+		temp = temp + 1
+		
+		function sets(){
+			const input = document.getElementById("myInput").value;
+			sessionStorage.setItem("widther", inputValue );
+			document.location.reload();
+			sessionStorage.setItem("temp", 2 );
+		}
+		function sets1(){
+			const input = document.getElementById("myInput");
+			const inputValue = input.value;
+			sessionStorage.setItem("widther", inputValue );
+			document.location.reload();
+			sessionStorage.setItem("temp", 2 );
+		}
+	</script>
+</body>
+</html>

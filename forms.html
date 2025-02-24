@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Document</title>
+</head>
+
+<body>
+	<!-- USe Post for sensitive data -->
+	<form action="#" method="POST">
+		<!-- Text Input -->
+		<!-- Lable removes the space before and after with paragraph -->
+		<div>
+			<fieldset>
+				<legend>Contact Details</legend>
+				<label>Email:
+					<input type="email" name="email">
+				</label>
+				<br/>
+				<label>Username:
+					<input  type="text" name="username" maxlength="10" />
+				</label>
+				<br/>
+				<label>Password:
+					<input type="password" name="password" maxlength="10" />
+				</label>
+				<br/>
+				<input type="submit" value="submit-user"/>
+				<input type="reset" value="reset"/>
+			</fieldset>
+		</div>
+	</form>
+	
+	<form action="#" method="GET">
+		<div>
+			<!-- Bubble Select -->
+			<p>Please select your favorite genere
+				<br/>
+				<input type="radio" name="genere" value="rock" checked="checked" /> Rock
+				<input type="radio" name="genere" value="classical" /> Classical
+				<input type="radio" name="genere" value="phonk" /> Phonk
+			</p>
+		</div>
+		
+		<div>
+			<!-- Multi Check box select -->
+			<p>Please select your music service(s):
+				<br/>
+				<input type="checkbox" name="service" value="apple_music" /> Apple Music
+				<input type="checkbox" name="service" value="spotify" /> Spotify
+				<input type="checkbox" name="service" value="youtube_music" /> Youtube Music
+			</p>
+		</div>
+		
+		
+		<div>
+			<!-- Dropdown -->
+			<p>What device do you listen to music on?
+				<br/>
+				<select name="devices">
+					<option/>
+					<option value="phone">Phone</option>
+					<option value="laptop">Laptop</option>
+					<option value="radio">Radio</option>
+				</select>
+			</p>
+		</div>
+		
+		<div>
+			<!-- Multi Dropdown -->
+			<p>Do you play any of the 4 following instruments?
+				<br/>
+				<select name="instruments" size="3" multiple="multiple">
+					<option value="guitar">Guitar</option>
+					<option value="piano">Piano</option>
+					<option value="drums">Drums</option>
+					<option value="clarinet">Clarinet</option>
+					
+				</select>
+			</p>
+		</div>
+		
+		<div>
+			<!-- Text box -->
+			<p>Write a Comment
+				<br/>
+				<textarea name="comment" cols="20" rows="4"placeholder="Describe here..."></textarea>
+			</p>
+		</div>
+		<input type="submit" value="submit"/>
+	</form>
+	
+	
+	<!-- File uplaod (Must use post method) -->
+	<form action="#" method="POST">	
+		<p>Upload your song in MP3 format:
+			<input type="file" name="user-song" />
+		</p>
+		<input type="submit" value="Upload"/>
+		
+	</form>
+</body>
+
+</html>
