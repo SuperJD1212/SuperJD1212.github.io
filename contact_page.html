@@ -35,91 +35,98 @@
 </head>
 
 <body>
-	<form action="#" method="GET">
-	
-		<fieldset>
-			<legend>General Info</legend>
-			<p>Username:
-				<input  type="text" name="username" maxlength="10" />
-			</p>
-			
-			<p>Email:
-				<input type="email" name="email" required="required">
-			</p>
-			
-			<p>Subject:
-				<select name="subject">
-					<option/>
-					<option value="general-inquiry">General Inquiry</option>
-					<option value="prodject-colab">Project Collaboration</option>
-					<option value="other">Other</option>
-				</select>
-			</p>
-			
-			<p>Message:
-				<br/>
-				<textarea name="comment" cols="20" rows="6"placeholder="Message here..."></textarea>
-			</p>
-			
-			<input type="date" id="date" name="date">
-			
-			<script> 
-				// Get the current date 
-				const today = new Date(); 
+	<main>
+		<section>
+			<form action="#" method="GET">
+				<fieldset>
+					<legend>General Info</legend>
+					<p>Username:
+						<input  type="text" name="username" maxlength="10" />
+					</p>
+					
+					<p>Email:
+						<input type="email" name="email" required="required">
+					</p>
+					
+					<p>Subject:
+						<select name="subject">
+							<option/>
+							<option value="general-inquiry">General Inquiry</option>
+							<option value="prodject-colab">Project Collaboration</option>
+							<option value="other">Other</option>
+						</select>
+					</p>
+					
+					<p>Message:
+						<br/>
+						<textarea name="comment" cols="20" rows="6"placeholder="Message here..."></textarea>
+					</p>
+					
+					<input type="date" id="date" name="date">
+					
+					<script> 
+						// Get the current date 
+						const today = new Date(); 
+						 
+						// Format the date to YYYY-MM-DD 
+						const formattedDate = today.toISOString().split('T')[0]; 
 				 
-				// Format the date to YYYY-MM-DD 
-				const formattedDate = today.toISOString().split('T')[0]; 
-		 
-				// Set the value of the date input to the current date 
-				document.getElementById('date').value = formattedDate; 
-			</script> 
-			
-			<br/><br/>
-			
-			<input type="reset" value="Reset"/>
-			<input type="submit" value="Submit"/>
-			
-		</fieldset>
-	</form>
+						// Set the value of the date input to the current date 
+						document.getElementById('date').value = formattedDate; 
+					</script> 
+					
+					<br/><br/>
+					
+					<input type="reset" value="Reset"/>
+					<input type="submit" value="Submit"/>
+					
+				</fieldset>
+			</form>
+		</section>
 		
-	<form action="#" method="GET">
+		<section>
+			<form action="#" method="GET">
+			
+				<br/>
+				<h2>Quick Survey</h2>
+				<hr/>
+				
+				<p>How did you find my portfolio?
+					<select name="find">
+						<option/>
+						<option value="google-search">Google Search</option>
+						<option value="social-media">Social Media</option>
+						<option value="referral">Referral</option>
+						<option value="other">Other</option>
+					</select>
+				</p>
+				
+				<p>Rate your overall experience on my site
+					<br/>
+					<input type="radio" name="rating" value="1" color="red" /> 1
+					<input type="radio" name="rating" value="2" /> 2
+					<input type="radio" name="rating" value="3" /> 3
+					<input type="radio" name="rating" value="4" /> 4
+					<input type="radio" name="rating" value="5" checked="checked" /> 5
+				</p>
+				
+				<p>Any additional comments?
+					<br/>
+					<textarea name="comment" cols="20" rows="6"placeholder="Message here..."></textarea>
+				</p>
+				
+				<input type="reset" value="Reset"/>
+				<input type="submit" value="Submit"/>
+				
+			</form>
+		</section>
+	</main>
 	
-		<br/>
-		<h2>Quick Survey</h2>
-		<hr/>
-		
-		<p>How did you find my portfolio?
-			<select name="find">
-				<option/>
-				<option value="google-search">Google Search</option>
-				<option value="social-media">Social Media</option>
-				<option value="referral">Referral</option>
-				<option value="other">Other</option>
-			</select>
-		</p>
-		
-		<p>Rate your overall experience on my site
-			<br/>
-			<input type="radio" name="rating" value="1" color="red" /> 1
-			<input type="radio" name="rating" value="2" /> 2
-			<input type="radio" name="rating" value="3" /> 3
-			<input type="radio" name="rating" value="4" /> 4
-			<input type="radio" name="rating" value="5" checked="checked" /> 5
-		</p>
-		
-		<p>Any additional comments?
-			<br/>
-			<textarea name="comment" cols="20" rows="6"placeholder="Message here..."></textarea>
-		</p>
-		
-		<input type="reset" value="Reset"/>
-		<input type="submit" value="Submit"/>
-		
-	</form>
-	
+	<footer>
 	<br/><br/>
 	<a href="index.html">Return</a>
-		
+	</footer>
+	
 </body>
 
 </html>
