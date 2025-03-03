@@ -1,11 +1,48 @@
 body {
-  background-color: #474747;
+	background-color: #323232;
 }
-header {
-  border-radius: 25px;
-  background: #73AD2180;
-  padding: 20px;
-  width: 200px;
-  height: 150px;
-  color: white;
+header{
+	border-radius: 25px;
+	background: #2C7E73;
+	color: white;
+	text-align: center;
+	width: fit-content;
+	padding: 0px 5px;
+	
+}
+section, address{
+	background: #1B524B;
+	color: white;
+	border-radius: 25px;
+	width: fit-content;
+	max-width: 800px;
+	padding: 0px 20px;
+}
+
+
+a{
+	border-radius: 25px;
+	background: #6F6F6F;
+	text-indent: 25px;
+	padding: 0px 5px;
+}
+
+a:link {
+	text-decoration: none;
+	color: white;
+}
+
+a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: blue;
+}
+
+a:active {
+	text-decoration: underline;
+	color: white;
 }
