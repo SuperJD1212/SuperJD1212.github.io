@@ -2,13 +2,17 @@ body {
 	background-color: #323232;
 }
 header{
+	
 	border-radius: 25px;
 	background: #2C7E73;
 	color: white;
 	text-align: center;
 	width: fit-content;
 	padding: 0px 5px;
-	
+	font-size: 3rem;
+}
+header > h1{
+	margin: 0;
 }
 section, address{
 	background: #1B524B;

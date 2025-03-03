@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+		font-family: "Press Start 2P", system-ui;
+		font-weight: 100;
+		font-style: italic;
+		font-stretch: condensed;
+}
+
+h1 {
+	font-family: Impact;
+	font-style: normal;
+	font-stretch: normal;
+	font-size: 3rem;
+	text-decoration: underline;
+}
+
+h1:first-letter {
+	font-size: 3em;
+}
+a:link {
+	color: pink;
+	text-decoration: none;
+}
+
+a:visited {
+	color: pink;
+	text-decoration: none;
+}
+
+a:hover {
+	color: lime;
+	text-decoration: underline;
+	
+}
+
