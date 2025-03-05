@@ -1,10 +1,25 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
 body {
 		font-family: "Press Start 2P", system-ui;
 		font-weight: 100;
 		font-style: italic;
 		font-stretch: condensed;
+		background-color: rgb( 40, 40, 40);
+}
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+header{
+	display: flex;
+	justify-content: center;
 }
 
 h1 {
@@ -13,11 +28,30 @@ h1 {
 	font-stretch: normal;
 	font-size: 3rem;
 	text-decoration: underline;
+	background-color: lime;
+	width: 50%;
+	border: green 10px solid;
+	text-align: center;
+	color: black;
 }
 
-h1:first-letter {
-	font-size: 3em;
+article{
+	background-color: lime;
+	color: black;
+	width: 300px;
+	padding:1rem;
+	margin: .6rem;
+	border-radius: 1rem;
+	box-shadow: 0 0 20px rgb(139, 245, 93);
 }
+
+button {
+	background-color: lime;
+	color: black;
+	border-radius: 5px;
+	
+}
+
 a:link {
 	color: pink;
 	text-decoration: none;
