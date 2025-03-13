@@ -1,35 +1,136 @@
-body {
-	background-color: #323232;
-}
-header{
-	
-	border-radius: 25px;
-	background: #2C7E73;
-	color: white;
-	text-align: center;
-	width: fit-content;
-	padding: 0px 5px;
-	font-size: 3rem;
-}
-header > h1{
-	margin: 0;
-}
-section, address{
-	background: #1B524B;
-	color: white;
-	border-radius: 25px;
-	width: fit-content;
-	max-width: 800px;
-	padding: 0px 20px;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root{
+	--body_background_color: #0f2a3f;
+
+	--header_background_color: #0f2a3f;
+
+	--title_txt_color: #f6d6bd;
+
+	--main_background_color: #997577;
+
+	--global_txt_color: #08141e;
+
+	--button_color: #c3a38a;
+
 }
 
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	color: var(--global_txt_color);
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.left{
+	margin-left: 40px;
+}
+
+.vert{
+	margin: 10px 0px 10px;
+}
+
+.below{
+	margin-bottom: 10px;
+}
+
+.sizes{
+	flex: auto;
+	min-width: 750px;
+	max-width: 1170px;
+}
+.li-inline{
+	display: flex;
+	justify-content: center;
+}
+
+.li-inline  li{
+	display: inline;
+	margin: 0px 10px;
+
+}
+
+body{
+	background-color: var(--body_background_color);
+}
+
+header{
+	justify-content: center;
+	display: flex;
+	background-color: var(--header_background_color);
+}
+
+header > div > h1 {
+	font-family: "Press Start 2P", system-ui;
+	font-size: 4rem;
+	text-align: center;
+	margin: 10px auto 60px;
+	color: var(--title_txt_color);
+}
+
+nav > ul > li {
+	display: inline;
+}
+
+header > div > nav {
+	margin-bottom: 130px;
+}
+
+main {
+	justify-content: center;
+	display: flex;
+}
+
+main > div {
+	background-color: var(--main_background_color);
+	position: relative;
+	top: -110px;
+	border-radius: 1rem;
+	box-shadow: 0 0 20px rgb(0, 0, 0, 50%);
+}
+
+h2 {
+	font-family: "Press Start 2P", system-ui;
+	display:block;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 10px;
+}
+
+main > div > section {
+	padding: 25px;
+}
+
+img{
+	width: 600px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table{
+	margin: 0px auto;
+}
+
+nav {
+	display: flex;
+	margin: auto;
+}
 
 a{
+	font-family: "Press Start 2P", system-ui;
 	border-radius: 25px;
-	background: #6F6F6F;
-	text-indent: 25px;
-	padding: 0px 5px;
+	background: var(--button_color);
+	padding: 5px 10px;
+	margin: 4px;
+	font-size: 24px;
+	display:inline-block;
+	width: fit-content;
 	text-decoration: none;
-	color: white;
+	color: black;
+	
 }
-
