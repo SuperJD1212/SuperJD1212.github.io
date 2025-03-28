@@ -12,14 +12,34 @@
 	--global_txt_color: #000000;
 
 	--button_color: #6495ed;
-
 }
+
+
+
+
 
 * {
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
 	color: var(--global_txt_color);
+}
+
+.dark-mode {
+	--body_background_color: #2d2b26;
+
+	--header_background_color: #2d2b26;
+
+	--title_txt_color: #1755c4;
+
+	--main_background_color: #1755c4;
+
+	--global_txt_color: #000000;
+
+	--button_color: #1755c4;
+}
+
+.asides{
 }
 
 .bold{
@@ -37,6 +57,27 @@
 .below{
 	margin-bottom: 10px;
 }
+
+.side{
+	position: absolute;
+	left: 6px;
+	top: 6px;
+	width: 0px;
+	Height: 0px;
+	visibility: 0;
+}
+
+.sidelabel{
+	position: absolute;
+	width: 58px;
+	Height: 58px;
+}
+
+.sidelabbelbutton{
+	width: 58px;
+	Height: 58px;
+}
+
 
 .sizes{
 	flex: auto;
@@ -56,6 +97,49 @@
 
 body{
 	background-color: var(--body_background_color);
+}
+
+aside{
+	position: absolute;  
+	width: 300px;
+	background-color: var(--title_txt_color);
+	left: -300px;
+	top: 0px;
+	border-right: solid;
+	border-width: 5px;
+	border-color: var(--title_txt_color);
+	height:100%;
+	display: flex;
+	justify-content: center;
+	transition: 0.3s;
+}
+
+label{
+	position: absolute;
+	left: 6px;
+	top: 6px;
+	width: 58px;
+	Height: 58px;
+	transition: 0.3s;
+}
+
+input[type=checkbox]:checked ~ aside{
+	left: 0px;
+	transform: translatex;
+}
+
+
+input[type=checkbox]:checked ~ label{
+	left: 306px;
+	transform: translatex;
+}
+
+aside > h1{
+	font-family: "Press Start 2P", system-ui;
+	font-size: 4rem;
+	text-align: center;
+	margin: 10px auto 60px;
+	color: var(--body_background_color);
 }
 
 header{
@@ -131,6 +215,4 @@ a{
 	display:inline-block;
 	width: fit-content;
 	text-decoration: none;
-	color: black;
-	
 }
