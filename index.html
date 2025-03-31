@@ -8,50 +8,34 @@
 
 <body>
 	
-	
-
-	<header>
-		<div class="sizes">
-			
-			
-
-			<h1>Jacob Beeler</h1>
-
-			<nav>
-				<a href="somthing_cool.html">A Cool Topic</a>
-				<a href="favorites.html">My Favorites</a>
-				<a href="dream_vacation.html">Dream Vacation</a>
-				<a href="2_tables.html">Some tables</a>
-				<a href="contact_page.html">Leave A Review</a>
-				<p><a href="learn/index.html" color="white">&nbsp;</a><p>
-			</nav>
-
-		</div>
-	</header>
-	
-	<main>
-		<div class="sizes">
-			<section>
-				<p>I like to to draw and bring my ideas to life</p>
-				<p>My favorite food is Sushi</p>
-			</section>
-			<p>
-				https://lospec.com/palette-list/slso8
-			</p>
-		</div>
-	</main>
-	
-	<section>
-		<input type="checkbox" id="sidebar" onclick="myFunction()" class="side">
+	<aside>
+		<input type="checkbox" id="sidebar" class="invischeckbox" checked>
 		
-		<label for="sidebar" class="sidelabel">
+		<label for="sidebar" class="sidebarlabel">
+			
+			<img src="images/light_menu.svg" alt="Menu Button" class="sidebarlabelbutton"/>
 		
-			<img src="images/light_menu.svg" alt="Menu Button" class="sidelabbelbutton"/>
 		</label>
 		
-		<aside>
+		<div class="aside_box">
 			<h1>Menu</h1>
-		</aside>
+			
+			<input type="checkbox" id="theme_side" onchange="theme_side()" class="invischeckbox">
+		
+			<label for="theme_side" class="themelabel">
+				<h2>Themes</h2>
+			</label>
+			
+			<div class="theme_side">
+				<input type="checkbox" name="theme" id="theme_1" onchange="theme_1()" class="invischeckbox">
+			
+				<label for="theme_1" class="themelabel">
+					<img src="images/theme_1.svg" alt="theme_1" class="themelabelbutton"/>
+				</label>
+			</div>
+		</div>
+		
+		
 		
 		
 		
@@ -60,12 +44,49 @@
 	
 		
 		<script>
-			function myFunction() {
+			function theme_1() {
 			   var element = document.body;
-			   element.classList.toggle("asides");
+			   element.classList.toggle("theme_1");
 			}
+			
+			theme_1();
 		</script>
-	</section>
+	</aside>
+	
+    <main>
+		<header>
+			<div class="sizes main_header">
+				
+				
+
+				<h1>Jacob Beeler</h1>
+
+				<nav>
+					<a href="somthing_cool.html">A Cool Topic</a>
+					<a href="favorites.html">My Favorites</a>
+					<a href="dream_vacation.html">Dream Vacation</a>
+					<a href="2_tables.html">Some tables</a>
+					<a href="contact_page.html">Leave A Review</a>
+					<p><a href="learn/index.html" color="white">&nbsp;</a><p>
+				</nav>
+
+			</div>
+		</header>
+	
+		<article class="flex_center">
+			<div class="sizes main_content">
+				<section>
+					<p>I like to to draw and bring my ideas to life</p>
+					<p>My favorite food is Sushi</p>
+				</section>
+				<p>
+					https://lospec.com/palette-list/slso8
+				</p>
+			</div>
+		</article>
+	</main>
+	
+	
 	
 	
 	

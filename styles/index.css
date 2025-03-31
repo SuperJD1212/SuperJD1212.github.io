@@ -1,45 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root{
-	--body_background_color: #fff8dc;
+	--body_background_color: #000000;
 
-	--header_background_color: #fff8dc;
+	--header_background_color: #000000;
 
-	--title_txt_color: #6495ed;
+	--title_txt_color: #000000;
 
-	--main_background_color: #6495ed;
+	--main_background_color: #000000;
 
 	--global_txt_color: #000000;
 
-	--button_color: #6495ed;
+	--button_color: #000000;
 }
-
-
-
-
 
 * {
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
 	color: var(--global_txt_color);
-}
-
-.dark-mode {
-	--body_background_color: #2d2b26;
-
-	--header_background_color: #2d2b26;
-
-	--title_txt_color: #1755c4;
-
-	--main_background_color: #1755c4;
-
-	--global_txt_color: #000000;
-
-	--button_color: #1755c4;
-}
-
-.asides{
 }
 
 .bold{
@@ -58,97 +37,80 @@
 	margin-bottom: 10px;
 }
 
-.side{
+
+
+.theme_1{
+	--body_background_color: #fff8dc;
+
+	--header_background_color: #fff8dc;
+
+	--title_txt_color: #6495ed;
+
+	--main_background_color: #6495ed;
+
+	--global_txt_color: #000000;
+
+	--button_color: #6495ed;
+}
+
+
+.dark-mode {
+	--body_background_color: #2d2b26;
+
+	--header_background_color: #2d2b26;
+
+	--title_txt_color: #1755c4;
+
+	--main_background_color: #1755c4;
+
+	--global_txt_color: #000000;
+
+	--button_color: #1755c4;
+}
+
+.themelabelbutton{
+	width: 31px;
+	Height: 31px;
+}
+
+.invischeckbox{
 	position: absolute;
-	left: 6px;
-	top: 6px;
+	left: 0px;
+	top: 0px;
 	width: 0px;
 	Height: 0px;
 	visibility: 0;
 }
 
-.sidelabel{
+.sidebarlabel{
+	
+	left: calc(50% - 586px);
 	position: absolute;
+}
+
+.sidebarlabelbutton{
 	width: 58px;
 	Height: 58px;
 }
-
-.sidelabbelbutton{
-	width: 58px;
-	Height: 58px;
-}
-
 
 .sizes{
 	flex: auto;
 	min-width: 750px;
 	max-width: 1170px;
 }
-.li-inline{
+
+.flex_center{ /* Only in 2_tables */
 	display: flex;
 	justify-content: center;
 }
 
-.li-inline  li{
+.flex_center  li{ /* Only in 2_tables */
 	display: inline;
 	margin: 0px 10px;
 
 }
 
-body{
-	background-color: var(--body_background_color);
-}
-
-aside{
-	position: absolute;  
-	width: 300px;
-	background-color: var(--title_txt_color);
-	left: -300px;
-	top: 0px;
-	border-right: solid;
-	border-width: 5px;
-	border-color: var(--title_txt_color);
-	height:100%;
-	display: flex;
-	justify-content: center;
-	transition: 0.3s;
-}
-
-label{
-	position: absolute;
-	left: 6px;
-	top: 6px;
-	width: 58px;
-	Height: 58px;
-	transition: 0.3s;
-}
-
-input[type=checkbox]:checked ~ aside{
-	left: 0px;
-	transform: translatex;
-}
-
-
-input[type=checkbox]:checked ~ label{
-	left: 306px;
-	transform: translatex;
-}
-
-aside > h1{
-	font-family: "Press Start 2P", system-ui;
-	font-size: 4rem;
-	text-align: center;
-	margin: 10px auto 60px;
-	color: var(--body_background_color);
-}
-
-header{
-	justify-content: center;
-	display: flex;
-	background-color: var(--header_background_color);
-}
-
-header > div > h1 {
+.main_header > h1 {
 	font-family: "Press Start 2P", system-ui;
 	font-size: 4rem;
 	text-align: center;
@@ -156,25 +118,75 @@ header > div > h1 {
 	color: var(--title_txt_color);
 }
 
-nav > ul > li {
-	display: inline;
-}
-
-header > div > nav {
+.main_header > nav {
 	margin-bottom: 130px;
 }
 
-main {
-	justify-content: center;
-	display: flex;
-}
-
-main > div {
+.main_content {
 	background-color: var(--main_background_color);
 	position: relative;
 	top: -110px;
 	border-radius: 1rem;
 	box-shadow: 0 0 20px rgb(0, 0, 0, 50%);
+}
+
+.main_content > section {
+	padding: 25px;
+}
+
+
+body{
+	background-color: var(--body_background_color);
+	display: flex;
+}
+
+.aside_box{
+	background-color: var(--main_background_color);
+	position: absolute;
+	width: 300px;
+	height: 100%;
+	justify-content: center;
+}
+
+aside{
+	display: flex;
+}
+
+input[type=checkbox]:checked ~ .aside_box{
+	display: none;
+}
+
+
+
+input[type=checkbox]:checked ~ label{
+}
+
+.aside_box > h1{
+	font-family: "Press Start 2P", system-ui;
+	font-size: 3rem;
+	text-align: center;
+	padding-top: 10px;
+	margin: 0px auto 60px;
+	color: var(--body_background_color);
+	height: auto;
+	text-decoration: underline;
+}
+
+header{
+	justify-content: center;
+	display: flex;
+	background-color: var(--header_background_color);
+	margin: auto;
+}
+
+nav > ul > li {
+	display: inline;
+}
+
+main {
+	justify-content: center;
+	display: block;
+	width: 100%;
 }
 
 h2 {
@@ -183,10 +195,6 @@ h2 {
 	text-align: center;
 	font-size: 2rem;
 	margin-bottom: 10px;
-}
-
-main > div > section {
-	padding: 25px;
 }
 
 img{
