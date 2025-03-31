@@ -7,57 +7,105 @@
 </head>
 
 <body>
-	<header>
-		<div class="sizes">
-			<h1>Cool Topic</h1>
-			<nav>
-				<a href="index.html">Home</a>
-			</nav>
-		</div>
-	</header>
 	
-    <main>
-		<div class="sizes">
-			<section>
-				<h2>Grand Master Oogway</h2>
-				<p>
-					Grand Master Oogway is an iconic character from the movie Series <strong>Kung-Fu-Panda</strong>. 
-					He is a Galápagos tortoise that hgas lived for over 1000 years. In his early years he traveled the 
-					world learning as much as he could, Eventually he settled within the Valley of peace becoming a teacher.
-				</p>
-				<p>
-					Oogway is wise through his years and knowlagable in many martial arts. Even though he is the Grand 
-					Master he is more knhown for his wisdom throught the movie barley showing his skills in martial arts.
-					It is only in later movies that he reveals his Kung-Fu prowles.
-				</p>
-			</section>
-
-			<section>
-				<h3>Quotes</h3>
-				<p><acronym title="Grand Master">GM</acronym> Oogway has manny iconic quotes suchas -</p>
-				<p><blockquote cite="https://lumenkind.com/blogs/quotes/master-oogway-quotes?srsltid=AfmBOopE5t8jXZNCuQ6DndIpgFDfSnd9V5xfY0_fdZ531b9GoGf49Roa">
-					<q>
-					Yesterday is history, tomorrow is a mystery, but today is a gift.
-					That is why it is called the present.
-					</q>
-				</blockquote></p>
-				<p>
-					<blockquote>
-						<q>
-							There is always something more to learn. Even for a master.
-						</q>
-					</blockquote>
-				</p>
-			</section>
+	<aside>
+		<input type="checkbox" id="sidebar" class="invischeckbox" checked>
+		
+		<label for="sidebar" class="sidebarlabel">
 			
+			<img src="images/light_menu.svg" alt="Menu Button" class="sidebarlabelbutton"/>
+		
+		</label>
+		
+		<div class="aside_box">
+			<h1>Menu</h1>
 			
-			<section>
-				<h3>Home Address</h3>
-				<address>
-					<p>Home: Jade Palace in the Valley of Peace</p>
-				</address>
-			</section>
+			<input type="checkbox" id="theme_side" onchange="theme_side()" class="invischeckbox">
+		
+			<label for="theme_side" class="themelabel">
+				<h2>Themes</h2>
+			</label>
+			
+			<div class="theme_side">
+				<input type="checkbox" name="theme" id="theme_1" onchange="theme_1()" class="invischeckbox">
+			
+				<label for="theme_1" class="themelabel">
+					<img src="images/theme_1.svg" alt="theme_1" class="themelabelbutton"/>
+				</label>
+			</div>
 		</div>
+		
+		
+		
+		
+		
+		
+		
+	
+		
+		<script>
+			function theme_1() {
+			   var element = document.body;
+			   element.classList.toggle("theme_1");
+			}
+			
+			theme_1();
+		</script>
+	</aside>
+
+	<main>
+		<header>
+			<div class="main_header">
+				<h1>Cool Topic</h1>
+				<nav>
+					<a href="index.html">Home</a>
+				</nav>
+			</div>
+		</header>
+	
+		<article class="flex_center">
+			<div class="main_content">
+				<section>
+					<h2>Grand Master Oogway</h2>
+					<p>
+						Grand Master Oogway is an iconic character from the movie Series <strong>Kung-Fu-Panda</strong>. 
+						He is a Galápagos tortoise that hgas lived for over 1000 years. In his early years he traveled the 
+						world learning as much as he could, Eventually he settled within the Valley of peace becoming a teacher.
+					</p>
+					<p>
+						Oogway is wise through his years and knowlagable in many martial arts. Even though he is the Grand 
+						Master he is more knhown for his wisdom throught the movie barley showing his skills in martial arts.
+						It is only in later movies that he reveals his Kung-Fu prowles.
+					</p>
+				</section>
+
+				<section>
+					<h3>Quotes</h3>
+					<p><acronym title="Grand Master">GM</acronym> Oogway has manny iconic quotes suchas -</p>
+					<p><blockquote cite="https://lumenkind.com/blogs/quotes/master-oogway-quotes?srsltid=AfmBOopE5t8jXZNCuQ6DndIpgFDfSnd9V5xfY0_fdZ531b9GoGf49Roa">
+						<q>
+						Yesterday is history, tomorrow is a mystery, but today is a gift.
+						That is why it is called the present.
+						</q>
+					</blockquote></p>
+					<p>
+						<blockquote>
+							<q>
+								There is always something more to learn. Even for a master.
+							</q>
+						</blockquote>
+					</p>
+				</section>
+				
+				
+				<section>
+					<h3>Home Address</h3>
+					<address>
+						<p>Home: Jade Palace in the Valley of Peace</p>
+					</address>
+				</section>
+			</div>
+		</article>
     </main>
 	
 	

@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root{
-	--body_background_color: #000000;
+	--body_background_color: #fff8dc;
 
-	--header_background_color: #000000;
+	--header_background_color: #fff8dc;
 
-	--title_txt_color: #000000;
+	--title_txt_color: #6495ed;
 
-	--main_background_color: #000000;
+	--main_background_color: #6495ed;
 
 	--global_txt_color: #000000;
 
-	--button_color: #000000;
+	--button_color: #6495ed;
+
+	--left_margin: auto;
 }
 
 * {
@@ -83,8 +85,7 @@
 }
 
 .sidebarlabel{
-	
-	left: calc(50% - 586px);
+	left: 100%;
 	position: absolute;
 }
 
@@ -93,9 +94,24 @@
 	Height: 58px;
 }
 
-.sizes{
+.aside_box{
+	background-color: var(--main_background_color);
+	width: 100%;
+}
+
+#aside_h1{
+	font-family: "Press Start 2P", system-ui;
+	font-size: 3rem;
+	text-align: center;
+	padding-top: 10px;
+	margin: 0px auto 60px;
+	color: var(--body_background_color);
+	height: auto;
+	text-decoration: underline;
+}
+
+.main_header{
 	flex: auto;
-	min-width: 750px;
 	max-width: 1170px;
 }
 
@@ -123,6 +139,8 @@
 }
 
 .main_content {
+	flex: auto;
+	max-width: 1170px;
 	background-color: var(--main_background_color);
 	position: relative;
 	top: -110px;
@@ -135,21 +153,19 @@
 }
 
 
+
 body{
 	background-color: var(--body_background_color);
 	display: flex;
 }
 
-.aside_box{
-	background-color: var(--main_background_color);
-	position: absolute;
-	width: 300px;
-	height: 100%;
-	justify-content: center;
-}
-
 aside{
+	position: relative;
 	display: flex;
+	width: calc(50% - 585px);
+	height: 100vh;
+	justify-content: center;
+	left: 0px;
 }
 
 input[type=checkbox]:checked ~ .aside_box{
@@ -159,18 +175,10 @@ input[type=checkbox]:checked ~ .aside_box{
 
 
 input[type=checkbox]:checked ~ label{
+
 }
 
-.aside_box > h1{
-	font-family: "Press Start 2P", system-ui;
-	font-size: 3rem;
-	text-align: center;
-	padding-top: 10px;
-	margin: 0px auto 60px;
-	color: var(--body_background_color);
-	height: auto;
-	text-decoration: underline;
-}
+
 
 header{
 	justify-content: center;
@@ -184,7 +192,6 @@ nav > ul > li {
 }
 
 main {
-	justify-content: center;
 	display: block;
 	width: 100%;
 }
