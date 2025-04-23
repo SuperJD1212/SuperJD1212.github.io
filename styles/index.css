@@ -71,8 +71,8 @@
 }
 
 .themelabelbutton{
-	width: 31px;
-	Height: 31px;
+	width: 2rem;
+	Height: auto;
 }
 
 .invischeckbox{
@@ -96,23 +96,27 @@
 
 .aside_box{
 	background-color: var(--main_background_color);
-	width: 100%;
+	min-width: calc(100% - 40px);
+	overflow: auto;
 }
 
 #aside_h1{
 	font-family: "Press Start 2P", system-ui;
-	font-size: 3rem;
+	font-size: 6vmin;
 	text-align: center;
-	padding-top: 10px;
-	margin: 0px auto 60px;
+	padding-top: 1rem;
+	margin: 0px auto 4rem;
 	color: var(--body_background_color);
 	height: auto;
 	text-decoration: underline;
 }
 
-.main_header{
-	flex: auto;
-	max-width: 1170px;
+#themes_aside{
+	font-family: "Press Start 2P", system-ui;
+	font-size: 4vmin;
+	text-align: center;
+	color: var(--body_background_color);
+	height: auto;
 }
 
 .flex_center{ /* Only in 2_tables */
@@ -126,33 +130,20 @@
 
 }
 
-.main_header > h1 {
-	font-family: "Press Start 2P", system-ui;
-	font-size: 4rem;
-	text-align: center;
-	margin: 10px auto 60px;
-	color: var(--title_txt_color);
-}
-
-.main_header > nav {
-	margin-bottom: 130px;
-}
-
 .main_content {
 	flex: auto;
 	max-width: 1170px;
 	background-color: var(--main_background_color);
 	position: relative;
-	top: -110px;
+	top: -80px;
 	border-radius: 1rem;
 	box-shadow: 0 0 20px rgb(0, 0, 0, 50%);
+	margin-right: auto;
 }
 
 .main_content > section {
 	padding: 25px;
 }
-
-
 
 body{
 	background-color: var(--body_background_color);
@@ -162,9 +153,8 @@ body{
 aside{
 	position: relative;
 	display: flex;
-	width: calc(50% - 585px);
+	width: 25%;
 	height: 100vh;
-	justify-content: center;
 	left: 0px;
 }
 
@@ -181,19 +171,33 @@ input[type=checkbox]:checked ~ label{
 
 
 header{
-	justify-content: center;
-	display: flex;
 	background-color: var(--header_background_color);
-	margin: auto;
+	max-width: 1170px;
 }
 
-nav > ul > li {
+header > h1 {
+	font-family: "Press Start 2P", system-ui;
+	font-size: 4rem;
+	text-align: center;
+	margin: 10px auto 60px;
+	max-width: 1170px;
+	/* max-width: 1170px;
+	min-width:700px; */
+	color: var(--title_txt_color);
+}
+
+header > nav {
+	margin-bottom: 100px;
+	max-width: 1170;
+}
+
+li {
 	display: inline;
 }
 
 main {
-	display: block;
-	width: 100%;
+	display: inline-block;
+	overflow: auto;
 }
 
 h2 {

@@ -43,18 +43,56 @@
 </head>
 <body>
 	
-	<header>
-		<div class="sizes">
+	<aside>
+		<input type="checkbox" id="sidebar" class="invischeckbox" checked>
+		
+		<label for="sidebar" class="sidebarlabel">
+			
+			<img src="images/light_menu.svg" alt="Menu Button" class="sidebarlabelbutton"/>
+		
+		</label>
+		
+		<div class="aside_box">
+			<h1 id="aside_h1">Menu</h1>
+			
+			<input type="checkbox" id="theme_side" onchange="theme_side()" class="invischeckbox">
+		
+			<label for="theme_side" class="themelabel">
+				<h2>Themes</h2>
+			</label>
+			
+			<div class="theme_side">
+				<input type="checkbox" name="theme" id="theme_1" onchange="theme_1()" class="invischeckbox">
+			
+				<label for="theme_1" class="themelabel">
+					<img src="images/theme_1.svg" alt="theme_1" class="themelabelbutton"/>
+				</label>
+			</div>
+		</div>
+		
+		<script>
+			function theme_1() {
+			   var element = document.body;
+			   element.classList.toggle("theme_1");
+			}
+			
+			theme_1();
+		</script>
+	</aside>
+	
+	
+
+	<!-- Table With Color -->
+	<main>
+	
+		<header>
 			<h1>School Schedual</h1>
 			<nav>
 				<a href="index.html">Home</a>
 			</nav>
-		</div>
-	</header>
-
-	<!-- Table With Color -->
-	<main>
-		<div class="sizes">
+		</header>
+	
+		<div class="main_content">
 			<section>
 				<h2>Weekly Schedule</h2>
 				<ul class="vert flex_center">

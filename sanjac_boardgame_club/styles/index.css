@@ -1,13 +1,23 @@
 :root {
-	--body_background: #515151;
-	--header_background: #515151;
-	--header_h1: #ff8648;
-	--header_nav: #ff8648;
+	--body_background: #1f0510;
+	--header_background: #1f0510;
+
+	--header_h1: #7c183c;
+	--header_nav: #7c183c;
+
+	--main-center: #1f0510 ;
+	--main-color: #7c183c;
 }
+
 * {
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
+}
+
+.center{
+	background-color: var(--main-center);
+	
 }
 
 body{
@@ -16,6 +26,7 @@ body{
 
 header {
 	background-color: var(--header_background);
+	
 }
 
 header > h1{
@@ -24,19 +35,19 @@ header > h1{
 	text-align: Center;
 }
 
-header > nav{
+nav{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-ul{
+nav ul{
     display: flex;
     list-style-type: none;
     gap: 2rem;
 }
 
-li{
+nav li{
     font-size: 1.4rem;
     text-align: center;
 }
@@ -53,25 +64,61 @@ a{
 
 main{
 	top: 131px;
-	width: 1790px;
+	display: flex;
+    justify-content: center;
+	color: var(--main-color);
 }
 
+.center{
+	padding: 10px;
+}
+
+
 @media only screen and (min-width: 480px){
+
+	
+
+	header{
+		position: sticky;
+		top: 0px;
+	}
+
 	nav{
 		height: 3rem;
 	}
+
+	.center{
+		width: 850px;
+	}
+
+	.redKings{
+		margin: 0px 20px;
+		width: 48px;
+		height: 48px;
+	}	
+
+	
 }
 
 @media only screen and (max-width: 480px){
 
+	
     nav{
         height: max-content;
     }
 
-    ul{
+    nav > ul{
         display: block;
     }
 
+	.center{
+		width: 100%;
+	}
 
+	.redKings{
+		display: none;
+	}
+
+	
 
 }
