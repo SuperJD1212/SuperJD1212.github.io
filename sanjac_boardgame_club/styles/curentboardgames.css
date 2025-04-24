@@ -38,6 +38,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+	padding-bottom: 10px;
 }
 
 nav ul{
@@ -82,14 +83,11 @@ main li{
 	gap: 1rem;
 }
 
-.gameName{
+.gameStats{
 	display: flex;
 }
 
-.right{
-	margin-left: auto;
-	margin-right: 0px;
-}
+
 
 
 
@@ -111,6 +109,12 @@ hr{
 		height: 3rem;
 	}
 
+	.redKings{
+	margin: 0px 20px;
+	width: 48px;
+	height: 48px;
+}
+
 	.center{
 		width: 850px;
 	}
@@ -123,13 +127,18 @@ hr{
 	main li{
 		display: flex;
 	}
+
+	.gameName{
+		width: 254px;
+	}
+	
+	.gametime{
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
-.redKings{
-	margin: 0px 20px;
-	width: 48px;
-	height: 48px;
-}
+
 
 @media only screen and (max-width: 480px){
 
@@ -159,4 +168,16 @@ hr{
 		display: none;
 	}
 
+	article h2{
+		font-size: 1rem;
+	}
+
+	article p{
+		font-size: .5rem;
+	}
+	
+	.gametime{
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
