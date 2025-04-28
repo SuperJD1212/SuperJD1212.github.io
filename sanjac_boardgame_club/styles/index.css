@@ -1,12 +1,12 @@
 :root {
-	--body_background: #1f0510;
-	--header_background: #1f0510;
+	--body_background: #c0cbdc;
+	--header_background: #0099db;
 
-	--header_h1: #7c183c;
-	--header_nav: #7c183c;
+	--header_h1: #000000;
+	--header_nav: #000000;
 
-	--main-center: #1f0510 ;
-	--main-color: #7c183c;
+	--main-center: #c0cbdc ;
+	--main-color: #000000;
 }
 
 * {
@@ -91,7 +91,7 @@ main{
 		width: 850px;
 	}
 
-	.redKings{
+	.Meeples{
 		margin: 0px 20px;
 		width: 48px;
 		height: 48px;
@@ -115,7 +115,7 @@ main{
 		width: 100%;
 	}
 
-	.redKings{
+	.Meeples{
 		display: none;
 	}
 

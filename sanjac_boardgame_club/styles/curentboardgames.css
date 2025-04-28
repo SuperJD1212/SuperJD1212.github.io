@@ -69,6 +69,10 @@ main{
 	color: var(--main-color);
 }
 
+.disclaimer{
+	text-align: center;
+}
+
 .center{
 	padding: 10px;
 }
@@ -79,7 +83,6 @@ main ul{
 
 main li{
 	padding: 10px;
-	display: flex;
 	gap: 1rem;
 }
 
@@ -87,14 +90,11 @@ main li{
 	display: flex;
 }
 
-
-
-
-
 hr{
+	border-top: 3px dashed var(--body_background);
 	margin:0px 10px;
-	color: var(--body_background);
 }
+
 
 @media only screen and (min-width: 480px){
 
@@ -109,24 +109,27 @@ hr{
 		height: 3rem;
 	}
 
-	.redKings{
-	margin: 0px 20px;
-	width: 48px;
-	height: 48px;
-}
+	.Meeples{
+		margin: 0px 20px;
+		width: 48px;
+		height: 48px;
+	}	
 
 	.center{
 		width: 850px;
 	}
 
-	.gImg{
-		min-width: 200px;
-		max-height: 200px;
-	}
-
 	main li{
 		display: flex;
+		align-items: flex-start;
 	}
+
+	.gImg{
+		max-width: 200px;
+		min-width: 200px;
+	}
+
+	
 
 	.gameName{
 		width: 254px;
@@ -136,6 +139,15 @@ hr{
 		margin-left: auto;
 		margin-right: auto;
 	}
+	
+	.gameLearn{
+		display: none;
+	}
+
+	input, label{
+		display: none;
+	}
+
 }
 
 
@@ -156,28 +168,153 @@ hr{
 	}
 
 	.gImg{
-		max-width: 100%;
-		max-height: 100%;
+		min-width: 150px;
+		max-width: 150px;
+		min-height: 150px;
+		max-height: 150px;
+		float: left;
+		margin-right: 10px ;
 	}
 
-	main li{
-		display: block;
-	}
 
-	.redKings{
+	.Meeples{
 		display: none;
 	}
 
-	article h2{
-		font-size: 1.1rem;
+	.gameStats{
+		font-size: 1rem;
 	}
 
 	article p{
 		font-size: 1rem;
 	}
-	
-	.gametime{
-		margin-left: auto;
-		margin-right: auto;
+
+	.gameStats{
+		flex-direction: column;
+		align-items: center;
+		min-height: 123px;
+		max-height: 123px;
 	}
+
+	.gameName{
+		text-align: center;
+		margin-bottom: auto;
+	}
+
+	.gametime{
+		text-align: center;
+		margin-bottom: auto;
+	}
+
+	.gamePlayers{
+		text-align: center;
+		margin-bottom: auto;
+	}
+
+	label{
+		width: auto;
+		text-align: center;
+	}
+
+	p{
+		margin-top: .75rem;
+	}
+
+	#SteampunkRallyC{
+		display: none;
+	}
+	
+	#SteampunkRallyC:checked ~ #SteampunkRallyP{
+		display: none;
+	}
+
+	#SteampunkRallyFusionC{
+		display: none;
+	}
+	
+	#SteampunkRallyFusionC:checked ~ #SteampunkRallyFusionP{
+		display: none;
+	}
+
+	#TheChamelionC{
+		display: none;
+	}
+	
+	#TheChamelionC:checked ~ #TheChamelionP{
+		display: none;
+	}
+	
+	#WondersC{
+		display: none;
+	}
+	
+	#WondersC:checked ~ #WondersP{
+		display: none;
+	}
+
+	#SkulkHallowC{
+		display: none;
+	}
+	
+	#SkulkHallowC:checked ~ #SkulkHallowP{
+		display: none;
+	}
+
+	#ShadowsAmsterdamC{
+		display: none;
+	}
+	
+	#ShadowsAmsterdamC:checked ~ #ShadowsAmsterdamP{
+		display: none;
+	}
+
+	#DominionC{
+		display: none;
+	}
+	
+	#DominionC:checked ~ #DominionP{
+		display: none;
+	}
+
+	#QuacksC{
+		display: none;
+	}
+	
+	#QuacksC:checked ~ #QuacksP{
+		display: none;
+	}
+
+	#CarcassonneC{
+		display: none;
+	}
+	
+	#CarcassonneC:checked ~ #CarcassonneP{
+		display: none;
+	}
+
+	#BloodOTCTC{
+		display: none;
+	}
+	
+	#BloodOTCTC:checked ~ #BloodOTCTP{
+		display: none;
+	}
+
+	#BossMonsterC{
+		display: none;
+	}
+	
+	#BossMonsterC:checked ~ #BossMonsterP{
+		display: none;
+	}
+
+	#multiuniversumC{
+		display: none;
+	}
+	
+	#multiuniversumC:checked ~ #multiuniversumP{
+		display: none;
+	}
+
+
 }
