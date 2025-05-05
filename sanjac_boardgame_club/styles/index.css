@@ -1,6 +1,6 @@
 :root {
 	--body_background: #c0cbdc;
-	--header_background: #0099db;
+	--header_background: #85b1c4;
 
 	--header_h1: #000000;
 	--header_nav: #000000;
@@ -22,6 +22,8 @@
 
 body{
 	background-color: var(--body_background);
+	background-image: url("../images/path.png");
+	background-size: 100vw auto;
 }
 
 header {
@@ -44,7 +46,6 @@ nav{
 nav ul{
     display: flex;
     list-style-type: none;
-    gap: 2rem;
 }
 
 nav li{
@@ -52,15 +53,19 @@ nav li{
     text-align: center;
 }
 
-a{
+li a{
 	color: var(--header_nav);
-	padding: 5px 10px;
-	margin: 4px;
 	font-size: 24px;
-	display:inline-block;
 	width: fit-content;
 	text-decoration: none;
 }
+
+a{
+	color: var(--header_nav);
+	display:inline-block;
+	width: fit-content;
+}
+
 
 main{
 	top: 131px;
@@ -72,6 +77,8 @@ main{
 .center{
 	padding: 10px;
 }
+
+
 
 
 @media only screen and (min-width: 480px){
@@ -87,6 +94,16 @@ main{
 		height: 3rem;
 	}
 
+	ul{
+		gap: 2rem;
+	}
+
+	a{
+		display:inline-block;
+		padding: 5px 10px;
+		margin: 4px;
+	}
+
 	.center{
 		width: 850px;
 	}
@@ -97,7 +114,12 @@ main{
 		height: 48px;
 	}	
 
-	
+	.BGCIMage{
+		margin-left: calc(50% - 200px);
+		width: 400px;
+		height: auto;
+		margin-top: 20px;
+	}
 }
 
 @media only screen and (max-width: 480px){
@@ -105,11 +127,21 @@ main{
 	
     nav{
         height: max-content;
+		min-width: 100vw;
+		max-width: 100vw;
+		height: auto;
     }
 
     nav > ul{
-        display: block;
+        display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
     }
+
+	nav li{
+		margin: 1rem;
+		min-width: fit-content;
+	}
 
 	.center{
 		width: 100%;
@@ -118,7 +150,12 @@ main{
 	.Meeples{
 		display: none;
 	}
-
+	
+	.BGCIMage{
+		width: 100%;
+		height: auto;
+		margin:5px;
+	}
 	
 
 }
